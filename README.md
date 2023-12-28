@@ -3,3 +3,4 @@ Simple Python script to take a .txt or .pdf file and provide readability percent
 
 1) Clone the repository
 2) Run the python script
+3) Test the script with any pdf or txt file
