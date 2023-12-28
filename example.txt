@@ -1,0 +1,135 @@
+Jack Ma, co-founder of the e-commerce company Alibaba, explained in a speech that IT was
+the focus of the past 20 years but, for the next 30 years, we'll be in the age of Data
+Technology (DT). During the age of IT, companies grew larger and stronger thanks to
+computer software and infrastructure. Now that businesses in most industries have already
+gathered enormous amounts of data, it's presently the right time to exploit DT to unlock
+insights, derive patterns, and boost new business growth. Broadly speaking, machine
+learning technologies enable businesses to better understand customer behavior, engage
+with customers, and optimize operations management. As for us individuals, machine
+learning technologies are already making our lives better every day.
+An application of machine learning with which we're all familiar is spam email filtering.
+Another is online advertising, where ads are served automatically based on information
+advertisers have collected about us. Stay tuned for the next chapters, where we'll learn how
+to develop algorithms in solving these two problems and more. A search engine is an
+application of machine learning we can't imagine living without. It involves information
+retrieval, which parses what we look for, queries related to records, and applies contextual
+ranking and personalized ranking, which sorts pages by topical relevance and user
+preference. E-commerce and media companies have been at the forefront of employing
+recommendation systems, which help customers to find products, services, and articles
+faster. The application of machine learning is boundless and we just keep hearing new
+examples everyday: credit card fraud detection, disease diagnosis, presidential election
+prediction, instant speech translation, and robot advisors—you name it!
+In the 1983 War Games movie, a computer made life-and-death decisions that could have
+resulted in Word War III. As far as we know, technology wasn't able to pull off such feats at
+the time. However, in 1997, the Deep Blue supercomputer did manage to beat a world chess
+champion. In 2005, a Stanford self-driving car drove by itself for more than 130 kilometers
+in a desert. In 2007, the car of another team drove through regular traffic for more than 50
+kilometers. In 2011, the Watson computer won a quiz against human opponents. In 2016,
+the AlphaGo program beat one of the best Go players in the world. If we assume that
+computer hardware is the limiting factor, then we can try to extrapolate into the future. Ray
+Kurzweil did just that and, according to him, we can expect human level intelligence
+around 2029. What's next?Getting Started with Machine Learning and Python Chapter 1
+
+A very high-level overview of machine
+learning technology
+Machine learning mimicking human intelligence is a subfield of AI—a field of computer
+science concerned with creating systems. Software engineering is another field in computer
+science. Generally, we can label Python programming as a type of software engineering.
+Machine learning is also closely related to linear algebra, probability theory, statistics, and
+mathematical optimization. We usually build machine learning models based on statistics,
+probability theory, and linear algebra, then optimize the models using mathematical
+optimization. The majority of you reading this book should have a good, or at least
+sufficient, command of Python programming. Those who aren't feeling confident about
+mathematical knowledge might be wondering how much time should be spent learning or
+brushing up on the aforementioned subjects. Don't panic: we'll get machine learning to
+work for us without going into any mathematical details in this book. It just requires some
+basic 101 knowledge of probability theory and linear algebra, which helps us to understand
+the mechanics of machine learning techniques and algorithms. And it gets easier as we'll be
+building models both from scratch and with popular packages in Python, a language we
+like and are familiar with.
+
+Unsupervised learning: When the learning data only contains indicative signals
+without any description attached, it's up to us to find the structure of the data
+underneath, to discover hidden information, or to determine how to describe the
+data. This kind of learning data is called unlabeled data. Unsupervised learning
+can be used to detect anomalies, such as fraud or defective equipment, or to
+group customers with similar online behaviors for a marketing campaign.
+Supervised learning: When learning data comes with a description, targets, or
+desired output besides indicative signals, the learning goal becomes to find a
+general rule that maps input to output. This kind of learning data is called
+labeled data. The learned rule is then used to label new data with unknown
+output. The labels are usually provided by event-logging systems and human
+experts. Besides, if it's feasible, they may also be produced by members of the
+public, through crowd-sourcing, for instance. Supervised learning is commonly
+used in daily applications, such as face and speech recognition, products or
+movie recommendations, and sales forecasting.
+We can further subdivide supervised learning into regression and classification.
+Regression trains on and predicts continuous-valued response, for example,
+predicting house prices, while classification attempts to find the appropriate class
+label, such as analyzing a positive/negative sentiment and prediction loan default.
+
+In fact, we have a whole zoo of machine learning algorithms that have experienced varying
+popularity over time. We can roughly categorize them into four main approaches such as
+logic-based learning, statistical learning, artificial neural networks, and genetic algorithms.
+The logic-based systems were the first to be dominant. They used basic rules specified by
+human experts and, with these rules, systems tried to reason using formal logic,
+background knowledge, and hypotheses. In the mid-1980s, artificial neural networks
+(ANNs) came to the foreground, to be then pushed aside by statistical learning systems in
+the 1990s. ANNs imitate animal brains and consist of interconnected neurons that are also
+an imitation of biological neurons. They try to model complex relationships between input
+and output values and to capture patterns in data. Genetic algorithms (GA) were popular in
+the 1990s. They mimic the biological process of evolution and try to find the optimal
+solutions using methods such as mutation and crossover.
+We are currently seeing a revolution in deep learning, which we might consider a
+rebranding of neural networks. The term deep learning was coined around 2006 and refers
+to deep neural networks with many layers. The breakthrough in deep learning is caused by
+the integration and utilization of Graphical Processing Units (GPUs), which massively
+speed up computation. GPUs were originally developed to render video games and are
+very good in parallel matrix and vector algebra. It's believed that deep learning resembles
+the way humans learn, therefore, it may be able to deliver on the promise of sentient
+machines.
+
+Especially in the context of supervised learning, we have a scenario similar to studying for
+an exam. We have a set of practice questions and the actual exams. We should be able to
+answer exam questions without knowing the answers to them. This is called
+generalization—we learn something from our practice questions and, hopefully, are able to
+apply the knowledge to other similar questions. In machine learning, these practice
+questions are called training sets or training samples. They're where the models derive
+patterns from. And the actual exams are testing sets or testing samples. They're where the
+models eventually apply and how compatible they are is what it's all about. Sometimes,
+between practice questions and actual exams, we have mock exams to assess how well we'll
+do in actual ones and to aid revision. These mock exams are called validation sets or
+validation samples in machine learning. They help us to verify how well the models will
+perform in a simulated setting, then we fine-tune the models accordingly in order to
+achieve greater hits.
+An old-fashioned programmer would talk to a business analyst or other expert, then
+implement a rule that adds a certain value multiplied by another value corresponding, for
+instance, to tax rules. In a machine learning setting, we give the computer example input
+values and example output values. Or if we're more ambitious, we can feed the program
+the actual tax texts and let the machine process the data further, just like an autonomous car
+doesn't need a lot of human input.
+This means implicitly that there's some function, for instance, a tax formula, we're trying to
+figure out. In physics, we have almost the same situation. We want to know how the
+universe works and formulate laws in a mathematical language. Since we don't know the
+actual function, all we can do is measure the error produced and try to minimize it. In
+supervised learning tasks, we compare our results against the expected values. In
+unsupervised learning, we measure our success with related metrics. For instance, we want
+clusters of data to be well defined; the metrics could be how similar the data points within
+one cluster are, and how different the data points from two clusters are. In reinforcement
+learning, a program evaluates its moves, for example, using some predefined function in a
+chess game.
+Other than the normal generalizing with data, there can be two levels of generalization,
+over and under generalization, which we'll explore in the next section.
+Especially in the context of supervised learning, we have a scenario similar to studying for
+an exam. We have a set of practice questions and the actual exams. We should be able to
+answer exam questions without knowing the answers to them. This is called
+generalization—we learn something from our practice questions and, hopefully, are able to
+apply the knowledge to other similar questions. In machine learning, these practice
+questions are called training sets or training samples. They're where the models derive
+patterns from. And the actual exams are testing sets or testing samples. They're where the
+models eventually apply and how compatible they are is what it's all about. Sometimes,
+between practice questions and actual exams, we have mock exams to assess how well we'll
+do in actual ones and to aid revision. These mock exams are called validation sets or
+validation samples in machine learning. They help us to verify how well the models will
+perform in a simulated setting, then we fine-tune the models accordingly in order to
+achieve greater hits.
